@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soranut Sangroongruang — Software Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Soranut Sangroongruang — Software Engineer specializing in Java, Spring Boot, Go, Python FastAPI, Microservices, and DevOps.">
+  <meta name="keywords" content="Soranut Sangroongruang, Software Engineer, Backend Developer, Spring Boot, Go, Python, TTB Spark, KMUTT">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Subtle Ambient Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Top Sticky Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-dot"></span>
+        <span>Soranut S.</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#simulators" class="nav-link">Live Demos</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle" title="Toggle Theme (Dark / Light)">
+          <i data-lucide="moon" id="theme-icon" style="width:16px; height:16px;"></i>
+        </button>
+        <a href="CV-Soranut-Sangroongruang.pdf" download="CV-Soranut-Sangroongruang.pdf" class="btn btn-primary btn-sm" title="Download CV (PDF)">
+          <i data-lucide="download" style="width:14px; height:14px;"></i> Download CV
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <header class="section hero-section" id="hero">
+      <div class="hero-layout">
+        <div class="hero-main-content">
+          <div class="hero-status-pill">
+            <span class="brand-dot"></span> Software Engineer • Open to Opportunities
+          </div>
+
+          <h1 class="hero-name">Soranut Sangroongruang</h1>
+
+          <div class="hero-typewriter-row">
+            <span>Specializing in:</span>
+            <span class="typewriter-text" id="typewriter-text"></span>
+          </div>
+
+          <div class="contact-quick-pills">
+            <a href="tel:0840710405" class="quick-pill" title="Phone">
+              <i data-lucide="phone" style="width:14px; height:14px; color:var(--accent-blue);"></i> 0840710405
+            </a>
+            <div class="quick-pill" onclick="copyToClipboard('Soranut169@gmail.com', 'Copied email to clipboard!')" title="Click to copy email">
+              <i data-lucide="mail" style="width:14px; height:14px; color:var(--accent-blue);"></i> Soranut169@gmail.com
+            </div>
+            <a href="https://github.com/c3b22" target="_blank" class="quick-pill" title="GitHub Profile">
+              <i data-lucide="github" style="width:14px; height:14px; color:var(--accent-blue);"></i> github.com/c3b22
+            </a>
+            <a href="https://www.linkedin.com/in/soranut-sangroongruang-a1940a332/" target="_blank" class="quick-pill" title="LinkedIn Profile">
+              <i data-lucide="linkedin" style="width:14px; height:14px; color:var(--accent-blue);"></i> linkedin.com/in/soranut-sangroongruang
+            </a>
+          </div>
+
+          <div class="hero-summary-box">
+            <strong style="color:var(--text-primary); display:block; margin-bottom:4px;">PROFESSIONAL SUMMARY</strong>
+            Information Technology graduate from KMUTT with a strong foundation in backend systems, scalable application development, and infrastructure management. Hands-on experience through internships in designing internal dashboards, building complex microservice architectures, and implementing security monitoring. Proficient in streamlining workflows through automation and DevOps practices, with a proven ability to bridge development, infrastructure, and quality assurance to deliver robust technical solutions.
+          </div>
+
+          <div class="hero-cta-row">
+            <a href="#projects" class="btn btn-primary">
+              <i data-lucide="folder-git-2" style="width:16px; height:16px;"></i> Explore Projects
+            </a>
+            <a href="CV-Soranut-Sangroongruang.pdf" download="CV-Soranut-Sangroongruang.pdf" class="btn btn-secondary">
+              <i data-lucide="download" style="width:16px; height:16px;"></i> Download CV (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Terminal Preview -->
+        <div class="hero-terminal-card">
+          <div class="terminal-top">
+            <div class="terminal-dots">
+              <span class="tdot tdot-red"></span>
+              <span class="tdot tdot-yellow"></span>
+              <span class="tdot tdot-green"></span>
+            </div>
+            <span class="terminal-title-text">SoranutEngineer.java</span>
+            <i data-lucide="terminal" style="width:14px; height:14px; color:var(--text-muted);"></i>
+          </div>
+          <div class="terminal-code">
+            <span class="code-key">package</span> com.soranut.core;<br><br>
+            <span class="code-key">public class</span> <span class="code-fn">SoranutEngineer</span> {<br>
+            &nbsp;&nbsp;<span class="code-key">private final</span> <span class="code-type">String</span> university = <span class="code-str">"KMUTT"</span>;<br>
+            &nbsp;&nbsp;<span class="code-key">private final</span> <span class="code-type">String</span> role = <span class="code-str">"Software Engineer"</span>;<br>
+            &nbsp;&nbsp;<span class="code-key">private final</span> <span class="code-type">String[]</span> coreStack = {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Java Spring Boot"</span>, <span class="code-str">"Python FastAPI"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Vue.js / React"</span>, <span class="code-str">"Docker & CI/CD"</span><br>
+            &nbsp;&nbsp;};<br><br>
+            &nbsp;&nbsp;<span class="code-key">public void</span> <span class="code-fn">buildScalableSystems</span>() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class="code-str">"🚀 Delivering robust architectures"</span>);<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-val">3+</div>
+          <div class="stat-txt">Production & Solo Projects</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">TTB Spark</div>
+          <div class="stat-txt">Bank Developer Intern</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">KMUTT</div>
+          <div class="stat-txt">B.Sc. Information Technology</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">Full Stack</div>
+          <div class="stat-txt">End-to-End Delivery</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Work Experience Section -->
+    <section class="section" id="experience">
+      <div class="section-header">
+        <div class="section-tag"><i data-lucide="briefcase" style="width:14px; height:14px;"></i> Work Experience</div>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-desc">Hands-on enterprise engineering experience in building developer portals, mapping microservice dependencies, and infrastructure management.</p>
+      </div>
+
+      <div class="exp-cards-list" id="work-exp-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <div class="section-tag"><i data-lucide="folder-git-2" style="width:14px; height:14px;"></i> Featured Projects</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">Full-lifecycle standalone systems, AI-powered health platforms, and enterprise multi-datasource applications.</p>
+      </div>
+
+      <div class="proj-grid" id="projects-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- Interactive Live Simulators Section -->
+    <section class="section" id="simulators">
+      <div class="section-header">
+        <div class="section-tag"><i data-lucide="cpu" style="width:14px; height:14px;"></i> Interactive Live Demonstrations</div>
+        <h2 class="section-title">Live Technology & Algorithm Demonstrations</h2>
+        <p class="section-desc">Interact with the real-time debt calculation engine (FinanceCare with 3 strategies) and the AI nutrition & workout scheduler (YourPace).</p>
+      </div>
+
+      <div class="simulators-wrapper">
+        <div class="sim-nav-tabs">
+          <button class="sim-nav-btn active" id="tab-debt-btn" onclick="switchSimulatorTab('debt')">
+            <i data-lucide="calculator" style="width:16px; height:16px;"></i> 1. Debt Amortization Simulator (FinanceCare — 3 Strategies)
+          </button>
+          <button class="sim-nav-btn" id="tab-yourpace-btn" onclick="switchSimulatorTab('yourpace')">
+            <i data-lucide="sparkles" style="width:16px; height:16px;"></i> 2. AI Health Mentor & Calendar Sync (YourPace)
+          </button>
+        </div>
+
+        <!-- Simulator 1: Debt Repayment Calculation Engine (FinanceCare — 3 Strategies) -->
+        <div id="sim-debt-view">
+          <div class="debt-grid">
+            <div class="sim-ctrl-box">
+              <h3 style="font-size:1.05rem; font-weight:700; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+                <i data-lucide="sliders" style="width:16px; height:16px; color:var(--accent-blue);"></i> Debt Simulation Parameters
+              </h3>
+
+              <div class="slider-group">
+                <div class="slider-label-row">
+                  <span>Credit Card Debt (Smaller Balance, 16% APR)</span>
+                  <span id="label-loan1" style="color:var(--accent-blue); font-family:var(--font-mono); font-weight:700;">฿40,000</span>
+                </div>
+                <input type="range" class="sim-range" id="range-loan1" min="10000" max="100000" step="5000" value="40000" oninput="calculateDebt()">
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-label-row">
+                  <span>Personal Loan (Higher Interest, 26% APR)</span>
+                  <span id="label-loan2" style="color:var(--accent-blue); font-family:var(--font-mono); font-weight:700;">฿80,000</span>
+                </div>
+                <input type="range" class="sim-range" id="range-loan2" min="20000" max="150000" step="5000" value="80000" oninput="calculateDebt()">
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-label-row">
+                  <span>Monthly Repayment Budget</span>
+                  <span id="label-budget" style="color:var(--accent-emerald); font-family:var(--font-mono); font-weight:700;">฿12,000</span>
+                </div>
+                <input type="range" class="sim-range" id="range-budget" min="4000" max="30000" step="500" value="12000" oninput="calculateDebt()">
+              </div>
+
+              <div>
+                <div class="slider-label-row" style="margin-bottom:6px;">Select Repayment Strategy (Strategy Pattern):</div>
+                <div class="strategy-row-3">
+                  <button class="strat-btn active" id="btn-strat-avalanche" onclick="setDebtStrategy('avalanche')">
+                    <strong>Debt Avalanche</strong><br><span style="font-size:0.7rem; opacity:0.85;">Highest APR First</span>
+                  </button>
+                  <button class="strat-btn" id="btn-strat-snowball" onclick="setDebtStrategy('snowball')">
+                    <strong>Debt Snowball</strong><br><span style="font-size:0.7rem; opacity:0.85;">Lowest Balance First</span>
+                  </button>
+                  <button class="strat-btn" id="btn-strat-optimal" onclick="setDebtStrategy('optimal')">
+                    <strong>Optimal Cost</strong><br><span style="font-size:0.7rem; opacity:0.85;">Marginal Cost & Penalties</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Output Box -->
+            <div class="sim-out-box">
+              <h3 style="font-size:1.05rem; font-weight:700; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+                <i data-lucide="bar-chart-2" style="width:16px; height:16px; color:var(--accent-emerald);"></i> Amortization Engine Output
+              </h3>
+
+              <div class="sim-out-cards">
+                <div class="out-card">
+                  <div class="out-title">Total Payoff Time</div>
+                  <div class="out-val" id="res-time">11 Months</div>
+                </div>
+                <div class="out-card">
+                  <div class="out-title">Total Accrued Interest</div>
+                  <div class="out-val amber" id="res-interest">฿11,240</div>
+                </div>
+                <div class="out-card">
+                  <div class="out-title">Savings vs Minimums</div>
+                  <div class="out-val green" id="res-savings">฿24,850</div>
+                </div>
+              </div>
+
+              <!-- 3-Way Real-Time Strategy Comparison Table -->
+              <div class="strategy-comparison-box">
+                <div style="font-size:0.84rem; font-weight:700; color:var(--text-primary); margin-bottom:8px; display:flex; justify-content:space-between; align-items:center;">
+                  <span>3-Strategy Amortization Comparison:</span>
+                  <span id="active-strategy-tag" class="badge-tag">Debt Avalanche Active</span>
+                </div>
+                <div class="strat-compare-grid-3">
+                  <div class="strat-compare-card" id="compare-card-avalanche">
+                    <div class="strat-compare-title">⚡ Debt Avalanche</div>
+                    <div class="strat-compare-stat"><strong id="cmp-aval-months">11 Months</strong> • <span id="cmp-aval-interest">฿11,240</span></div>
+                    <div class="strat-compare-desc">Maximizes mathematically saved interest by paying 26% APR first.</div>
+                  </div>
+                  <div class="strat-compare-card" id="compare-card-snowball">
+                    <div class="strat-compare-title">🎯 Debt Snowball</div>
+                    <div class="strat-compare-stat"><strong id="cmp-snow-months">12 Months</strong> • <span id="cmp-snow-interest">฿12,680</span></div>
+                    <div class="strat-compare-desc" id="cmp-snow-desc">Eliminates ฿40k card in ~4 months for rapid momentum.</div>
+                  </div>
+                  <div class="strat-compare-card" id="compare-card-optimal">
+                    <div class="strat-compare-title">🧠 Optimal Cost</div>
+                    <div class="strat-compare-stat"><strong id="cmp-opt-months">11 Months</strong> • <span id="cmp-opt-interest">฿11,480</span></div>
+                    <div class="strat-compare-desc">Targets compound risk (Marginal Cost + BoT penalty protection).</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:var(--bg-card); border:1px solid var(--border-subtle); padding:12px 16px; border-radius:var(--radius-sm); font-size:0.84rem; color:var(--text-secondary); line-height:1.55;" id="strategy-explanation-text">
+                💡 <strong>Strategy & Factory Pattern:</strong> FinanceCare provides 3 distinct mathematical strategies (Avalanche, Snowball, and Optimal Cost) to give users flexibility based on psychological momentum or maximum monetary savings.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulator 2: YourPace AI Health Mentor & Calendar Automation -->
+        <div id="sim-yourpace-view" style="display:none;">
+          <div class="yourpace-sim-grid">
+            <div class="sim-ctrl-box">
+              <h3 style="font-size:1.05rem; font-weight:700; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+                <i data-lucide="sparkles" style="width:16px; height:16px; color:var(--accent-blue);"></i> Select Health & Fitness Goal
+              </h3>
+
+              <div class="health-goal-selector">
+                <button class="goal-option-btn active" id="goal-btn-fatloss" onclick="setHealthGoal('fatloss')">
+                  <div>
+                    <div>🔥 Fat Loss & Muscle Retention</div>
+                    <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">High protein, complex carbohydrates & caloric deficit</div>
+                  </div>
+                  <i data-lucide="check" style="width:16px; height:16px; color:var(--accent-blue);"></i>
+                </button>
+
+                <button class="goal-option-btn" id="goal-btn-muscle" onclick="setHealthGoal('muscle')">
+                  <div>
+                    <div>💪 Muscle Hypertrophy & Strength</div>
+                    <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Caloric surplus, progressive overload & glycogen loading</div>
+                  </div>
+                  <i data-lucide="check" style="width:16px; height:16px; opacity:0;"></i>
+                </button>
+
+                <button class="goal-option-btn" id="goal-btn-endurance" onclick="setHealthGoal('endurance')">
+                  <div>
+                    <div>🏃 Endurance & Marathon Conditioning</div>
+                    <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">High carb fuel, hydration & active muscle recovery</div>
+                  </div>
+                  <i data-lucide="check" style="width:16px; height:16px; opacity:0;"></i>
+                </button>
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-label-row">
+                  <span>Daily Calorie Target</span>
+                  <span id="label-cal" style="color:var(--accent-blue); font-family:var(--font-mono); font-weight:700;">2,100 kcal</span>
+                </div>
+                <input type="range" class="sim-range" id="range-cal" min="1500" max="3500" step="50" value="2100" oninput="updateNutritionPreview()">
+              </div>
+            </div>
+
+            <!-- AI Response Output Box -->
+            <div class="ai-response-card">
+              <h3 style="font-size:1.05rem; font-weight:700; color:var(--text-primary); display:flex; align-items:center; gap:8px;">
+                <i data-lucide="bot" style="width:16px; height:16px; color:var(--accent-blue);"></i> Google Gemini 1.5 & n8n Workflow Intelligence
+              </h3>
+
+              <div class="macro-bars">
+                <div class="macro-box">
+                  <div style="font-size:0.72rem; color:var(--text-muted);">Protein</div>
+                  <div class="macro-val" id="macro-protein">210g</div>
+                </div>
+                <div class="macro-box">
+                  <div style="font-size:0.72rem; color:var(--text-muted);">Carbs</div>
+                  <div class="macro-val" id="macro-carbs">184g</div>
+                </div>
+                <div class="macro-box">
+                  <div style="font-size:0.72rem; color:var(--text-muted);">Healthy Fats</div>
+                  <div class="macro-val" id="macro-fats">58g</div>
+                </div>
+              </div>
+
+              <div style="background:var(--bg-card); border:1px solid var(--border-subtle); padding:14px; border-radius:var(--radius-sm); font-size:0.86rem; color:var(--text-secondary); line-height:1.6;" id="ai-mentor-advice">
+                🤖 <strong>Gemini AI Advice:</strong> For fat loss, maintaining a 40% high-protein intake safeguards muscle tissue. Spread meals across 3-4 servings and ensure at least 2.8L daily water intake.
+              </div>
+
+              <div class="calendar-sync-badge">
+                <i data-lucide="calendar-check" style="width:18px; height:18px; color:var(--accent-emerald);"></i>
+                <div>
+                  <strong>n8n Google Calendar Dispatch:</strong>
+                  <div style="font-size:0.78rem; opacity:0.9;">Workout session automatically scheduled and synced to Google Calendar (Today, 6:00 PM)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section" id="skills">
+      <div class="section-header">
+        <div class="section-tag"><i data-lucide="layers" style="width:14px; height:14px;"></i> Skills & Competencies</div>
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-desc">Core competencies across backend languages, modern frameworks, database architecture, and DevOps infrastructure.</p>
+      </div>
+
+      <div class="skills-matrix-grid" id="skills-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+      <div class="section-header">
+        <div class="section-tag"><i data-lucide="graduation-cap" style="width:14px; height:14px;"></i> Education</div>
+        <h2 class="section-title">Education</h2>
+      </div>
+
+      <div class="education-box">
+        <div>
+          <div class="edu-main">King Mongkut's University of Technology Thonburi (KMUTT)</div>
+          <div class="edu-sub">B.Sc. in Information Technology, School of Information Technology</div>
+        </div>
+        <div style="font-family:var(--font-mono); color:var(--accent-blue); font-weight:700;">
+          2022 – 2026
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Redesigned Deep Dive Modal -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-window">
+      <div class="modal-close-icon" onclick="closeProjectModal()">
+        <i data-lucide="x" style="width:16px; height:16px;"></i>
+      </div>
+      <div id="modal-content">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-wrap">
+    <div class="container">
+      <div>Soranut Sangroongruang • Software Engineer Portfolio</div>
+      <div style="font-size:0.8rem; margin-top:4px; color:var(--text-muted);">
+        Engineered with Clean Typography, Architectural Rigor & Modern Web Standards
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
