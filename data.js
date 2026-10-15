@@ -37,6 +37,7 @@ window.PORTFOLIO_DATA = {
       items: [
         { name: "Java", desc: "Core Java, OOP, Streams, Concurrency & Spring Boot ecosystem" },
         { name: "Python", desc: "FastAPI microservices, EasyOCR, PyTorch, Scripting & Automation" },
+        { name: "Go & Dart", desc: "Go (Echo) REST services; Dart for Flutter mobile apps" },
         { name: "JavaScript", desc: "ES6+, React, Vue 3, Async REST APIs & Node.js" },
         { name: "SQL", desc: "PostgreSQL, MySQL, Complex Queries, Schema Design & Indexing" }
       ]
@@ -48,7 +49,7 @@ window.PORTFOLIO_DATA = {
         { name: "Spring Boot 3", desc: "Spring Security 6, JPA/Hibernate, Multi-Datasource, RESTful APIs" },
         { name: "FastAPI", desc: "High-concurrency async Python services, Image Processing APIs" },
         { name: "Vue.js 3", desc: "Vite, Composition API, Pinia, Vue Router 4, TailwindCSS & DaisyUI" },
-        { name: "Mockito & JUnit 5", desc: "Unit & Integration Testing, Mocking, JaCoCo Coverage" }
+        { name: "Testing", desc: "JUnit 5, Mockito, Karate, Vitest & JaCoCo Coverage" }
       ]
     },
     {
@@ -67,7 +68,8 @@ window.PORTFOLIO_DATA = {
       items: [
         { name: "Docker & Compose", desc: "Multi-container orchestration, Isolated container networking" },
         { name: "Git & Bitbucket / Jira", desc: "Version control, Agile sprint management & Code reviews" },
-        { name: "Automation & CI/CD", desc: "n8n Webhook Pipelines, Jenkins, Microsoft Power Automate" },
+        { name: "Automation & CI/CD", desc: "n8n Webhook Pipelines, Jenkins, Nexus, Microsoft Power Automate" },
+        { name: "SonarQube & Trivy", desc: "Code quality analysis and container/dependency vulnerability scanning" },
         { name: "Security & Auth", desc: "Stateless JWT, Argon2 Password Hashing & RBAC Controls" }
       ]
     }
@@ -77,19 +79,20 @@ window.PORTFOLIO_DATA = {
     {
       company: "TMBThanachart Bank Public Company Limited",
       badge: "TTB spark academy",
-      position: "Software Developer Intern",
+      position: "Software Developer Intern (Backend)",
       period: "January 2025 – July 2025",
       location: "Bangkok, Thailand",
-      techStack: ["Java", "Spring Boot", "PostgreSQL", "REST APIs", "Bitbucket", "Jira", "Git"],
+      techStack: ["Java", "Spring Boot", "Gradle", "PostgreSQL", "SonarQube", "Trivy", "REST APIs", "Bitbucket", "Jira", "Git"],
       highlights: [
         {
           title: "Internal Developer Portal",
-          desc: "Developed and maintained a centralized internal dashboard to streamline microservice management and monitoring across the organization, featuring:",
+          desc: "Developed and maintained a centralized internal dashboard to streamline microservice management and monitoring across 350+ microservices, featuring:",
           subItems: [
             "<strong>Service Registry:</strong> Aggregated quick information and deployment history for each microservice.",
-            "<strong>Dependency Health Check:</strong> Implemented a feature to track outdated dependencies across services and recommend secure, up-to-date versions.",
+            "<strong>Dependency Health Check:</strong> Built a Gradle task exporting each service's dependency tree as JSON, and tracked outdated dependencies with secure version recommendations.",
+            "<strong>SonarQube Integration:</strong> Integrated SonarQube reports to visualize code quality metrics and scan results from various services.",
             "<strong>Favorite Microservice:</strong> Added a bookmarking feature allowing developers to quickly access and monitor their preferred microservices.",
-            "<strong>CVE & Release Comparison Report:</strong> Designed a security reporting tool to track CVE vulnerabilities and compare metrics across different software releases."
+            "<strong>CVE & Release Comparison Report:</strong> Designed a tool to compare CVE metrics across releases, with a Java tool merging Trivy scan reports per release."
           ]
         },
         {
@@ -130,10 +133,10 @@ window.PORTFOLIO_DATA = {
     {
       id: "dnd-ai-dm",
       name: "D&D AI DM — Multiplayer AI Dungeon Master",
-      badge: "Full-Stack AI Product",
+      badge: "Solo Project — AI Dungeon Master Web App",
       category: "ai-game",
-      period: "September – October 2026",
-      role: "Full Stack Developer",
+      period: "September 2026 – Present",
+      role: "Full Stack Developer (Solo)",
       github: "https://github.com/c3b22/dnd-ai-dm",
       techStack: ["Next.js 15", "React 19", "TypeScript", "Vercel AI SDK", "Google Gemini", "Supabase", "PostgreSQL", "Realtime", "Vitest", "Vercel"],
       summary: "A multiplayer web app where Thai-speaking groups play D&D with an AI Dungeon Master. Every player submits an action each round, then the AI narrates and resolves all of them at once, keeping the story inside a chosen adventure outline (hook, acts, NPCs and DM-only secrets) instead of free-form chat.",
@@ -141,14 +144,14 @@ window.PORTFOLIO_DATA = {
         { step: "1. Web Client", tech: "Next.js 15 + React 19", desc: "Lobby, room codes, scene banners with per-campaign mood tint and 3D dice rolls; works on phone and desktop" },
         { step: "2. Round Engine", tech: "Next.js API Routes", desc: "Collects every player's action, then resolves the round atomically (HP, status, items, gold)" },
         { step: "3. AI Dungeon Master", tech: "Vercel AI SDK + Gemini", desc: "Streams Thai narration; model chosen by benchmarking latency and error rates, with a lighter fallback model" },
-        { step: "4. Data & Realtime", tech: "Supabase (PostgreSQL)", desc: "Anonymous auth, realtime room sync and 36 SQL migrations" }
+        { step: "4. Data & Realtime", tech: "Supabase (PostgreSQL)", desc: "Anonymous auth, realtime room sync row-level security and 35 SQL migrations" }
       ],
       responsibilities: [
         "<strong>Designed Round-Based Simultaneous Play:</strong> Built a turn engine where all player actions are resolved together with atomic HP and state updates, rather than an open-ended AI chat.",
         "<strong>Integrated AI Narration:</strong> Connected Google Gemini through the Vercel AI SDK to narrate scenes and rule on actions in Thai, constrained by structured adventure outlines with DM-only secrets.",
         "<strong>Benchmarked and Selected AI Models:</strong> Measured latency and error rates across Gemini versions on real prompts and documented the choice, including fallback to a lighter model on slow or failed calls.",
         "<strong>Built Multiplayer Game Systems:</strong> Room creation with 6-digit join codes, character and weapon selection, inventory, in-game shop, player-to-player trading, rest votes and campaign recap.",
-        "<strong>Modeled the Database and Shipped to Production:</strong> Designed the Supabase schema through 36 migrations, covered core logic with Vitest tests and deployed on Vercel."
+        "<strong>Modeled the Database and Shipped to Production:</strong> Designed the Supabase schema through 35 migrations with anonymous auth, Realtime and row-level security, covered the codebase with 1,700+ automated Vitest tests and deployed on Vercel."
       ]
     },
 
