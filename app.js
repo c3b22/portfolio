@@ -239,6 +239,9 @@ function renderProjects() {
       </ul>
 
       <div class="proj-actions">
+        ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn btn-primary btn-sm" title="Open Live Demo">
+          <i data-lucide="external-link" style="width:14px; height:14px;"></i> Live Demo
+        </a>` : ''}
         <a href="${p.github}" target="_blank" class="btn btn-secondary btn-sm" title="View Repository on GitHub">
           <i data-lucide="github" style="width:14px; height:14px;"></i> GitHub Repository
         </a>
@@ -639,7 +642,10 @@ function openProjectModal(id) {
     </div>
 
     <div style="display:flex; gap:12px; margin-top:8px; padding-top:16px; border-top:1px solid var(--border-subtle);">
-      <a href="${p.github}" target="_blank" class="btn btn-primary btn-sm">
+      ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn btn-primary btn-sm" title="Open Live Demo">
+          <i data-lucide="external-link" style="width:14px; height:14px;"></i> Live Demo
+        </a>` : ''}
+        <a href="${p.github}" target="_blank" class="btn btn-secondary btn-sm">
         <i data-lucide="github" style="width:14px; height:14px;"></i> View Repository on GitHub
       </a>
       <button class="btn btn-secondary btn-sm" onclick="closeProjectModal()">Close</button>

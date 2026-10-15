@@ -138,6 +138,7 @@ window.PORTFOLIO_DATA = {
       period: "September 2026 – Present",
       role: "Full Stack Developer (Solo)",
       github: "https://github.com/c3b22/dnd-ai-dm",
+      demo: "https://dnd-ai-dm-omega.vercel.app",
       techStack: ["Next.js 15", "React 19", "TypeScript", "Vercel AI SDK", "Google Gemini", "Supabase", "PostgreSQL", "Realtime", "Vitest", "Vercel"],
       summary: "A multiplayer web app where Thai-speaking groups play D&D with an AI Dungeon Master. Every player submits an action each round, then the AI narrates and resolves all of them at once, keeping the story inside a chosen adventure outline (hook, acts, NPCs and DM-only secrets) instead of free-form chat.",
       flowNodes: [
@@ -188,6 +189,7 @@ window.PORTFOLIO_DATA = {
       period: "October 2025 – March 2026",
       role: "Full Stack Developer",
       github: "https://github.com/financeCare",
+      demo: "https://c3b22.github.io/financecare-web/",
       techStack: ["Java 17", "Spring Boot 3", "Python FastAPI", "Flutter", "EasyOCR", "PostgreSQL", "Redis", "MinIO", "Docker", "JUnit 5"],
       summary: "FinanceCare is an intelligent personal finance and debt management platform designed to help users analyze financial health, calculate optimal debt payoff strategies, verify transaction slips using AI-powered OCR, and discover supplementary job opportunities to improve debt repayment efficiency.",
       flowNodes: [
