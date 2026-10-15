@@ -19,11 +19,11 @@ window.PORTFOLIO_DATA = {
     education: {
       university: "King Mongkut's University of Technology Thonburi (KMUTT)",
       degree: "B.Sc. in Information Technology, School of Information Technology",
-      period: "2022 – 2026"
+      period: "2022 – 2026 (Graduated)"
     },
     summary: "Information Technology graduate from KMUTT with a strong foundation in backend systems, scalable application development, and infrastructure management. Hands-on experience through internships in designing internal dashboards, building complex microservice architectures, and implementing security monitoring. Proficient in streamlining workflows through automation and DevOps practices, with a proven ability to bridge development, infrastructure, and quality assurance to deliver robust technical solutions.",
     stats: [
-      { label: "Production & Solo Projects", value: "3+" },
+      { label: "Full-Stack Projects", value: "4" },
       { label: "Bank Developer Intern", value: "TTB Spark" },
       { label: "B.Sc. Information Technology", value: "KMUTT" },
       { label: "End-to-End Delivery", value: "Full Stack" }
@@ -127,6 +127,31 @@ window.PORTFOLIO_DATA = {
   ],
 
   projects: [
+    {
+      id: "dnd-ai-dm",
+      name: "D&D AI DM — Multiplayer AI Dungeon Master",
+      badge: "Full-Stack AI Product",
+      category: "ai-game",
+      period: "September – October 2026",
+      role: "Full Stack Developer",
+      github: "https://github.com/c3b22/dnd-ai-dm",
+      techStack: ["Next.js 15", "React 19", "TypeScript", "Vercel AI SDK", "Google Gemini", "Supabase", "PostgreSQL", "Realtime", "Vitest", "Vercel"],
+      summary: "A multiplayer web app where Thai-speaking groups play D&D with an AI Dungeon Master. Every player submits an action each round, then the AI narrates and resolves all of them at once, keeping the story inside a chosen adventure outline (hook, acts, NPCs and DM-only secrets) instead of free-form chat.",
+      flowNodes: [
+        { step: "1. Web Client", tech: "Next.js 15 + React 19", desc: "Lobby, room codes, scene banners with per-campaign mood tint and 3D dice rolls; works on phone and desktop" },
+        { step: "2. Round Engine", tech: "Next.js API Routes", desc: "Collects every player's action, then resolves the round atomically (HP, status, items, gold)" },
+        { step: "3. AI Dungeon Master", tech: "Vercel AI SDK + Gemini", desc: "Streams Thai narration; model chosen by benchmarking latency and error rates, with a lighter fallback model" },
+        { step: "4. Data & Realtime", tech: "Supabase (PostgreSQL)", desc: "Anonymous auth, realtime room sync and 36 SQL migrations" }
+      ],
+      responsibilities: [
+        "<strong>Designed Round-Based Simultaneous Play:</strong> Built a turn engine where all player actions are resolved together with atomic HP and state updates, rather than an open-ended AI chat.",
+        "<strong>Integrated AI Narration:</strong> Connected Google Gemini through the Vercel AI SDK to narrate scenes and rule on actions in Thai, constrained by structured adventure outlines with DM-only secrets.",
+        "<strong>Benchmarked and Selected AI Models:</strong> Measured latency and error rates across Gemini versions on real prompts and documented the choice, including fallback to a lighter model on slow or failed calls.",
+        "<strong>Built Multiplayer Game Systems:</strong> Room creation with 6-digit join codes, character and weapon selection, inventory, in-game shop, player-to-player trading, rest votes and campaign recap.",
+        "<strong>Modeled the Database and Shipped to Production:</strong> Designed the Supabase schema through 36 migrations, covered core logic with Vitest tests and deployed on Vercel."
+      ]
+    },
+
     {
       id: "yourpace",
       name: "YourPace",

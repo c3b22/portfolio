@@ -126,7 +126,7 @@ function initTypewriter() {
   const roles = [
     "Software Engineer",
     "Java Spring Boot & Backend Specialist",
-    "Microservices & Cloud Architect",
+    "AI-Integrated Full-Stack Developer",
     "DevOps & Security Practitioner"
   ];
   let rIndex = 0;
@@ -524,11 +524,11 @@ function calculateDebt() {
   if (explText) {
     if (debtStrategy === 'avalanche') {
       const intDiff = Math.abs(resSnowball.totalInterest - resAvalanche.totalInterest);
-      explText.innerHTML = `💡 <strong>Avalanche Advantage:</strong> By prioritizing the <strong>26% APR</strong> personal loan, you save <strong>฿${intDiff.toLocaleString()}</strong> in interest compared to Snowball and become debt-free in <strong>${resAvalanche.months} months</strong>.`;
+      explText.innerHTML = `<strong>Avalanche Advantage:</strong> By prioritizing the <strong>26% APR</strong> personal loan, you save <strong>฿${intDiff.toLocaleString()}</strong> in interest compared to Snowball and become debt-free in <strong>${resAvalanche.months} months</strong>.`;
     } else if (debtStrategy === 'snowball') {
-      explText.innerHTML = `💡 <strong>Snowball Advantage:</strong> By eliminating the smaller <strong>฿${l1.toLocaleString()}</strong> credit card in just <strong>${resSnowball.loan1ClearedMonth} months</strong>, you gain immediate momentum and reduce your required monthly obligations fastest.`;
+      explText.innerHTML = `<strong>Snowball Advantage:</strong> By eliminating the smaller <strong>฿${l1.toLocaleString()}</strong> credit card in just <strong>${resSnowball.loan1ClearedMonth} months</strong>, you gain immediate momentum and reduce your required monthly obligations fastest.`;
     } else {
-      explText.innerHTML = `💡 <strong>Optimal Cost Advantage:</strong> Evaluates marginal cost (monthly interest liability + Bank of Thailand overdue penalty risk) each month to minimize compound financial damage while protecting minimum payment integrity.`;
+      explText.innerHTML = `<strong>Optimal Cost Advantage:</strong> Evaluates marginal cost (monthly interest liability + Bank of Thailand overdue penalty risk) each month to minimize compound financial damage while protecting minimum payment integrity.`;
     }
   }
 }
@@ -562,13 +562,13 @@ function updateNutritionPreview() {
 
   if (currentHealthGoal === 'fatloss') {
     pPct = 0.40; cPct = 0.35; fPct = 0.25;
-    advice = `🤖 <strong>Gemini AI Advice:</strong> For <strong>Fat Loss & Muscle Retention</strong>, prioritizing a 40% high-protein intake (${Math.round((calories*pPct)/4)}g) prevents muscle catabolism. Distribute carbs evenly across 3-4 meals and maintain at least 2.8L daily water hydration.`;
+    advice = `<strong>Gemini AI Advice:</strong> For <strong>Fat Loss & Muscle Retention</strong>, prioritizing a 40% high-protein intake (${Math.round((calories*pPct)/4)}g) prevents muscle catabolism. Distribute carbs evenly across 3-4 meals and maintain at least 2.8L daily water hydration.`;
   } else if (currentHealthGoal === 'muscle') {
     pPct = 0.30; cPct = 0.50; fPct = 0.20;
-    advice = `🤖 <strong>Gemini AI Advice:</strong> For <strong>Muscle Hypertrophy & Strength</strong>, a structured caloric surplus with 50% carbohydrates (${Math.round((calories*cPct)/4)}g) replenishes glycogen for progressive overload, alongside 1.8g protein per kg bodyweight.`;
+    advice = `<strong>Gemini AI Advice:</strong> For <strong>Muscle Hypertrophy & Strength</strong>, a structured caloric surplus with 50% carbohydrates (${Math.round((calories*cPct)/4)}g) replenishes glycogen for progressive overload, alongside 1.8g protein per kg bodyweight.`;
   } else {
     pPct = 0.25; cPct = 0.55; fPct = 0.20;
-    advice = `🤖 <strong>Gemini AI Advice:</strong> For <strong>Endurance & Marathon Conditioning</strong>, sustained complex carbohydrate loading provides enduring aerobic energy, paired with essential electrolytes and rapid post-run recovery protein.`;
+    advice = `<strong>Gemini AI Advice:</strong> For <strong>Endurance & Marathon Conditioning</strong>, sustained complex carbohydrate loading provides enduring aerobic energy, paired with essential electrolytes and rapid post-run recovery protein.`;
   }
 
   const pGrams = Math.round((calories * pPct) / 4);
